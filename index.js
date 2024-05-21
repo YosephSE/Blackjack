@@ -44,7 +44,7 @@ function renderGame() {
     }
     
     sumEl.textContent = "Sum: " + sum
-    messageEl.classList.remove("win", "lose") // Remove previous classes
+    messageEl.classList.remove("win", "lose")
     
     if (sum <= 20) {
         message = "Do you want to draw a new card?"
@@ -52,12 +52,12 @@ function renderGame() {
     } else if (sum === 21) {
         message = "You've got Blackjack!"
         hasBlackJack = true
-        messageEl.classList.add("win") // Add win class
+        messageEl.classList.add("win")
         newCardButton.disabled = true
     } else {
         message = "You're out of the game!"
         isAlive = false
-        messageEl.classList.add("lose") // Add lose class
+        messageEl.classList.add("lose")
         newCardButton.disabled = true
     }
     messageEl.textContent = message
