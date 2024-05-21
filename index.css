@@ -1,10 +1,16 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
-    background-image: url("images/table.png");
-    background-size: cover;
+    background: linear-gradient(to right, #D65BCA, #21D190);
+    
     font-weight: bold;
-    color: white;
+    color: #333;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
 }
 
 h1 {
@@ -26,4 +32,49 @@ button {
     border-radius: 2px;
     margin-bottom: 2px;
     margin-top: 2px;
+}
+body {
+     
+}
+
+.card {
+    width: 350px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+button:hover {
+    background-color: #016f32;
+    color: goldenrod;
+    transform: scale(1.05);
+}
+
+.win {
+    color: green;
+    font-weight: bold;
+    animation: winAnimation 1s infinite;
+}
+
+.lose {
+    color: red;
+    font-weight: bold;
+    animation: loseAnimation 1s infinite;
+}
+
+@keyframes winAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes loseAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
 }
